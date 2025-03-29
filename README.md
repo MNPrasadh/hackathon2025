@@ -1,4 +1,10 @@
-# AI Powered to detect and prevent CyberSecurity Threats
+# AI Powered to detect and prevent CyberSecurity Threat
+
+#People's Use
+Most of the people uses social media where the download any kind of unauthorized images and from unauthorized people this may lead to any hack so our project acts as an intermediate platform between social media's and user where it checks the image with any kind of malicious links are present and also additional feature of network intrusions and maps
+
+#How does it differ from existing
+Most of the social media platform don't check any links or contents instead they focus mostly of encryption of images after decryption the images can be sent via our platform and our platform checks for data encryption and also for network intrusions and attackers location
 
 ## Overview
 This project integrates **AI-powered cybersecurity and image security** techniques to detect **network intrusions and malicious hidden data in images**. The system is built using **CNN for steganography detection** and **LSTM-RNN for intrusion detection** using the **CIC-IDS dataset**. If an attack is detected, the system will **plot the attacker's location**.
