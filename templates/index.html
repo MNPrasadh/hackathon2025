@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Link Scanner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+
+    <h2 class="mb-3">🔍 Upload Image for OCR & Link Detection</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" class="form-control mb-3">
+        <button type="submit" class="btn btn-primary">Upload & Scan</button>
+    </form>
+
+    {% if image %}
+    <h3 class="mt-4">📸 Uploaded Image</h3>
+    <img src="{{ url_for('static', filename='uploads/' + image) }}" class="img-fluid mb-3" width="300">
+
+    <h3>📝 Extracted Text</h3>
+    <p>{{ text }}</p>
+
+    <h3>🔗 Extracted Links</h3>
+    {% if links %}
+        <ul>
+            {% for link in links %}
+                {% if link in suspicious_links %}
+                    <li><span class="text-danger">🚨 Suspicious:</span> <a href="{{ link }}" target="_blank">{{ link }}</a></li>
+                {% else %}
+                    <li><span class="text-success">✅ Safe:</span> <a href="{{ link }}" target="_blank">{{ link }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No links found.</p>
+    {% endif %}
+    {% endif %}
+
+</body>
+</html>
