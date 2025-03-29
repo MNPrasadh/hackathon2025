@@ -1,9 +1,9 @@
-# AI Powered to detect and prevent CyberSecurity Threat
+## AI Powered to detect and prevent CyberSecurity Threat
 
-#People's Use
+##People's Use
 Most of the people uses social media where the download any kind of unauthorized images and from unauthorized people this may lead to any hack so our project acts as an intermediate platform between social media's and user where it checks the image with any kind of malicious links are present and also additional feature of network intrusions and maps
 
-#How does it differ from existing
+##How does it differ from existing
 Most of the social media platform don't check any links or contents instead they focus mostly of encryption of images after decryption the images can be sent via our platform and our platform checks for data encryption and also for network intrusions and attackers location
 
 ## Overview
